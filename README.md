@@ -4,6 +4,8 @@ Codex-first intelligent workflow router.
 
 gstack-core is a lightweight skill framework for routing plain-language work into the right Codex skills, plugins, MCP tools, CLI commands, and recovery workflows. It focuses on reducing wasted context, preventing off-track execution, asking for missing conditions before generation, and closing tasks with verification.
 
+> Independent open-source project. gstack-core is not affiliated with, endorsed by, or sponsored by OpenAI.
+
 ## What It Does
 
 - Routes development, debugging, documentation, creative, GitHub, browser, and recovery tasks from one gstack entry point.
@@ -74,6 +76,18 @@ Capability cards live in `skills/gstack/capabilities/*.json` for installed skill
 - `Doctor`: check local readiness and optional tool availability.
 - `Route Trace`: record why a route was chosen and how it was verified.
 - `Codegraph Lite`: optional bundled local symbol/index helper for orientation and impact checks.
+
+## Commercial Direction
+
+gstack-core is intended to stay useful as an open-source core while leaving room for commercial packs, team setup, private registries, and enterprise governance. The open-source project should prove the routing model; paid layers can add packaged workflows, organization policy, route analytics, and private capability distribution.
+
+See:
+
+- `docs/commercial-roadmap.md`
+- `docs/product-positioning.md`
+- `docs/enterprise-governance.md`
+- `docs/marketing-copy.md`
+- `docs/brand-guidelines.md`
 
 ## Open Source Prep
 

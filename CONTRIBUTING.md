@@ -8,6 +8,7 @@ gstack-core is designed around small, reviewable additions.
 - Small reference updates that improve routing quality.
 - Eval prompts that catch bad routing, missing clarification, or weak closeout.
 - Doctor checks that identify real install problems without blocking optional workflows.
+- Commercially useful workflow packs that remain generic and do not leak private customer assumptions.
 
 ## Avoid
 
@@ -16,6 +17,8 @@ gstack-core is designed around small, reviewable additions.
 - Adding a tool without fallback behavior.
 - Routes that generate creative assets without required constraints.
 - Claims of completion without verification.
+- Vendor lock-in that makes the open-source core depend on one paid service.
+- Capability cards that route external AI work without disclosure and evidence rules.
 
 ## Capability Card Checklist
 
@@ -29,3 +32,11 @@ gstack-core is designed around small, reviewable additions.
 
 Keep `skills/gstack/SKILL.md` lean. Put detailed behavior in one-level reference files under `skills/gstack/references/`.
 
+## Commercial Contributions
+
+If a contribution is intended to support a future paid pack, keep the open-source part self-contained:
+
+- Define the generic workflow in the open core.
+- Put private/customer-specific policy in local profiles outside this repo.
+- Keep extension points documented through capability cards.
+- Make fallback behavior work without a paid service.
