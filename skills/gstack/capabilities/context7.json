@@ -1,0 +1,17 @@
+{
+  "id": "docs.library.context7",
+  "type": "mcp",
+  "target": "Context7",
+  "best_for": ["current library docs", "API examples", "framework usage", "version-specific technical references"],
+  "triggers": ["latest docs", "library", "framework", "API docs", "how to use", "version"],
+  "required_inputs": ["library_or_framework", "question"],
+  "optional_inputs": ["version"],
+  "cost": "low",
+  "risk": "low",
+  "requires_network": true,
+  "requires_auth": false,
+  "fallback": ["official website", "local package docs", "repo examples"],
+  "verification": ["official/current source cited", "implementation matches docs"],
+  "when_not_to_use": ["stable language syntax known without docs", "project-local API is authoritative"]
+}
+

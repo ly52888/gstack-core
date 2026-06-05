@@ -1,0 +1,16 @@
+{
+  "id": "code.orientation.codegraph",
+  "type": "local-script",
+  "target": "bundled scripts/codex-codegraph or codex-codegraph skill",
+  "best_for": ["symbol search", "caller/callee lookup", "impact analysis", "project orientation"],
+  "triggers": ["where is", "impact", "callers", "callees", "large codebase", "architecture"],
+  "required_inputs": ["project_root"],
+  "optional_inputs": ["symbol", "changed_files"],
+  "cost": "low",
+  "risk": "low",
+  "requires_network": false,
+  "requires_auth": false,
+  "fallback": ["rg", "direct file reads"],
+  "verification": ["indexed status", "direct file read confirms important findings"],
+  "when_not_to_use": ["tiny single-file task"]
+}

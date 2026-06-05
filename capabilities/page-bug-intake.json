@@ -1,0 +1,16 @@
+{
+  "id": "development.page-bug",
+  "type": "workflow",
+  "target": "natural-command-router plus investigate/browser QA",
+  "best_for": ["current page bug reports", "screenshot-based bug reports", "task execution failures", "button/form failures", "UI/runtime error diagnosis"],
+  "triggers": ["这个页面有bug", "当前页面报错", "当前页面任务失败", "这里有bug", "看截图修一下", "任务执行失败", "流程失败", "按钮没反应", "提交失败", "页面报错", "这里不对"],
+  "required_inputs": ["visible_evidence_or_symptom"],
+  "optional_inputs": ["url_or_route", "screenshot", "error_text", "expected_behavior", "reproduction_steps", "task_id", "account_role"],
+  "cost": "medium",
+  "risk": "medium",
+  "requires_network": false,
+  "requires_auth": false,
+  "fallback": ["investigate", "qa", "browser-qa", "HTTP probes", "manual reproduction from user"],
+  "verification": ["symptom reproduced or evidence inspected", "root cause identified", "fix applied if requested", "focused verification run", "browser/visual evidence when UI is involved"],
+  "when_not_to_use": ["pure planning request", "no symptom/evidence and user refuses to provide context"]
+}

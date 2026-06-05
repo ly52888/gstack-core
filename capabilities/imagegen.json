@@ -1,0 +1,17 @@
+{
+  "id": "creative.image.imagegen",
+  "type": "skill",
+  "target": "imagegen",
+  "best_for": ["raster image generation", "image editing", "transparent cutouts", "visual variants"],
+  "triggers": ["generate image", "ad image", "product mockup", "illustration", "edit image", "transparent background"],
+  "required_inputs": ["use_case", "subject", "aspect_ratio_or_destination"],
+  "optional_inputs": ["style", "reference_images", "exact_text", "save_path"],
+  "cost": "medium",
+  "risk": "medium",
+  "requires_network": true,
+  "requires_auth": false,
+  "fallback": ["canva", "picsart", "code-native-svg-css"],
+  "verification": ["subject matches", "style matches", "text accurate", "format usable", "saved path reported"],
+  "when_not_to_use": ["existing SVG/icon system should be edited directly", "deterministic diagram is better as code"]
+}
+

@@ -1,0 +1,17 @@
+{
+  "id": "development.security-review",
+  "type": "skill",
+  "target": "security review or guard workflow",
+  "best_for": ["auth", "payments", "secrets", "database writes", "permission changes", "production risk"],
+  "triggers": ["auth", "token", "secret", "payment", "SQL", "database", "permission", "production", "security"],
+  "required_inputs": ["scope", "risk_area"],
+  "optional_inputs": ["threat_model", "test_command", "rollback_plan"],
+  "cost": "medium",
+  "risk": "high",
+  "requires_network": false,
+  "requires_auth": false,
+  "fallback": ["manual security checklist", "focused code review"],
+  "verification": ["risk noted", "tests or checks run", "no secret leakage", "rollback path known"],
+  "when_not_to_use": ["pure copy/design task with no security surface"]
+}
+

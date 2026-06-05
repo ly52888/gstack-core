@@ -1,0 +1,16 @@
+{
+  "name": "codex-codegraph",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "codex-codegraph": "./bin/codex-codegraph.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "cli": "node ./bin/codex-codegraph.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

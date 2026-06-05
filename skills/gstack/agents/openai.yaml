@@ -1,0 +1,4 @@
+display_name: gstack
+short_description: Smart Codex workflow router for development, creative work, GitHub, docs, recovery, and verification.
+default_prompt: Use gstack to route this task, ask for missing conditions if needed, then execute with the smallest sufficient skill/plugin/tool set and close with verification.
+

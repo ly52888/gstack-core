@@ -1,0 +1,17 @@
+{
+  "id": "creative.design.canva",
+  "type": "plugin",
+  "target": "Canva",
+  "best_for": ["editable branded designs", "presentations", "social media layouts", "brand kit driven creative"],
+  "triggers": ["Canva", "presentation", "deck", "brand kit", "editable design", "social post"],
+  "required_inputs": ["content_source", "audience_or_use_case", "brand_or_style"],
+  "optional_inputs": ["slide_count", "format", "source_design_link"],
+  "cost": "medium",
+  "risk": "medium",
+  "requires_network": true,
+  "requires_auth": true,
+  "fallback": ["Presentations", "imagegen", "local HTML/CSS design"],
+  "verification": ["editable link returned", "brand kit/style applied", "source claims preserved", "candidate selected"],
+  "when_not_to_use": ["single raster image with no need for editable design", "repo-native UI implementation"]
+}
+

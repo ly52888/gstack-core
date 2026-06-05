@@ -1,0 +1,17 @@
+{
+  "id": "workflow.recovery",
+  "type": "skill",
+  "target": "gstack recovery",
+  "best_for": ["context handoff", "quota interruption", "network failure", "resume after crash", "long task checkpoint"],
+  "triggers": ["context full", "handoff", "quota", "network down", "resume", "continue", "新对话", "交接"],
+  "required_inputs": ["current_goal"],
+  "optional_inputs": ["changed_files", "commands_run", "known_blockers"],
+  "cost": "low",
+  "risk": "low",
+  "requires_network": false,
+  "requires_auth": false,
+  "fallback": ["plain handoff packet"],
+  "verification": ["handoff includes exact next step", "do-not-redo notes included", "blockers explicit"],
+  "when_not_to_use": ["short self-contained task"]
+}
+

@@ -1,0 +1,16 @@
+{
+  "id": "planning.multi-ai-council",
+  "type": "workflow",
+  "target": "multi-ai-council reference plus browser/Chrome or internal fallback",
+  "best_for": ["requirements discussion before development", "multi-round external AI critique", "red-team product planning", "website/system planning", "MVP scope refinement", "legally safer inspired redesign", "reference website evidence review before development"],
+  "triggers": ["multi AI", "多个AI", "多 AI", "多轮讨论", "外部AI沟通", "互相审计", "互相攻击", "需求讨论", "开工前", "完善需求", "产品方案", "系统之前", "网站之前", "复刻网站", "仿站", "clone website", "replicate website", "我需要开发一个这样的网站", "开发一个这样的网站", "类似项目", "参考这个做", "开始启动", "/skill"],
+  "required_inputs": ["idea_or_goal_or_reference_url", "evidence_or_reference_material"],
+  "optional_inputs": ["constraints", "shareable_data_policy", "preferred_ai_sites", "success_metric", "timeline", "tech_stack", "reference_urls", "screenshots", "differentiation_requirements", "legal_or_compliance_concerns", "minimum_ai_count", "minimum_rounds"],
+  "cost": "high",
+  "risk": "medium",
+  "requires_network": true,
+  "requires_auth": true,
+  "fallback": ["internal council simulation", "office-hours", "plan-ceo-review", "plan-eng-review", "plan-design-review"],
+  "verification": ["reference website evidence gathered", "evidence brief prepared", "data disclosure level approved", "at least three external AI participants used or fallback labeled", "multi-round discussion completed", "cross-attack round completed", "final plan review round completed", "unsupported assumptions separated", "consensus and contradictions summarized", "open questions listed", "MVP scope proposed", "development readiness decision recorded"],
+  "when_not_to_use": ["small obvious edit", "blocked secrets or PII would be required", "user forbids external AI/browser use", "no concrete evidence or reference material is available"]
+}

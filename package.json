@@ -1,0 +1,15 @@
+{
+  "name": "gstack-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Codex-first intelligent skill/plugin/tool router.",
+  "type": "module",
+  "scripts": {
+    "doctor": "skills/gstack/scripts/gstack-doctor.sh",
+    "validate:capabilities": "node scripts/validate-capabilities.mjs",
+    "test:codegraph": "cd skills/gstack/scripts/codex-codegraph && npm test",
+    "test": "npm run validate:capabilities && npm run doctor && npm run test:codegraph",
+    "route": "node scripts/route-preview.mjs"
+  },
+  "license": "Apache-2.0"
+}

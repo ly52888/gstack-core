@@ -1,0 +1,17 @@
+{
+  "id": "github.workflow",
+  "type": "plugin",
+  "target": "GitHub",
+  "best_for": ["repository inspection", "issues", "pull requests", "CI investigation", "publishing changes"],
+  "triggers": ["github", "pull request", "issue", "CI", "release", "fork", "comment"],
+  "required_inputs": ["repo_or_url", "desired_action"],
+  "optional_inputs": ["branch", "issue_number", "pull_number"],
+  "cost": "low",
+  "risk": "medium",
+  "requires_network": true,
+  "requires_auth": true,
+  "fallback": ["gh CLI", "web browser", "local git"],
+  "verification": ["action URL", "status/check result", "comment/PR/issue id", "local git state"],
+  "when_not_to_use": ["local-only task with no remote action required"]
+}
+

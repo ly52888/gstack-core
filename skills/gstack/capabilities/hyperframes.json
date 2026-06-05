@@ -1,0 +1,17 @@
+{
+  "id": "creative.video.hyperframes",
+  "type": "skill",
+  "target": "hyperframes",
+  "best_for": ["HTML-based videos", "GSAP animation", "captions", "scene transitions", "audio-reactive visuals"],
+  "triggers": ["video", "animation", "caption", "subtitle", "GSAP", "title card", "transition"],
+  "required_inputs": ["duration", "aspect_ratio", "message_or_script", "visual_identity"],
+  "optional_inputs": ["audio", "voiceover", "source_assets", "export_format"],
+  "cost": "high",
+  "risk": "medium",
+  "requires_network": false,
+  "requires_auth": false,
+  "fallback": ["Remotion", "Canva", "static storyboard"],
+  "verification": ["preview renders", "timing correct", "no layout overlap", "export path reported"],
+  "when_not_to_use": ["simple still image", "avatar presenter video is required"]
+}
+

@@ -1,0 +1,17 @@
+{
+  "id": "qa.browser",
+  "type": "plugin",
+  "target": "Chrome or browser automation",
+  "best_for": ["visual acceptance", "logged-in browser state", "web UI verification", "screenshots"],
+  "triggers": ["browser", "Chrome", "visual", "screenshot", "login", "acceptance", "页面验收"],
+  "required_inputs": ["target_url_or_route", "acceptance_goal"],
+  "optional_inputs": ["viewport", "account_state", "screenshots"],
+  "cost": "medium",
+  "risk": "low",
+  "requires_network": false,
+  "requires_auth": false,
+  "fallback": ["Playwright CLI", "HTTP probes", "manual screenshot from user"],
+  "verification": ["visible UI evidence", "screenshot or DOM assertion", "no console/runtime blocker if checked"],
+  "when_not_to_use": ["pure backend unit change with no UI surface"]
+}
+
