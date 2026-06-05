@@ -37,7 +37,7 @@ Alternative short pitch:
 - Natural command routing for page bugs, screenshots, failed tasks, QA, docs, and closeout.
 - Multi-round external AI council for pre-build planning and legally safer inspired redesign.
 - Bundled local codegraph for orientation and impact checks.
-- Open core with a clear path to commercial governance and workflow packs.
+- Open core with a clear path to maintained governance and workflow packs.
 
 ## Not The Pitch
 

@@ -33,9 +33,9 @@ Future enterprise configs may define:
 
 This is a planning sketch. The current open-source core documents the behavior but does not enforce centralized policy yet.
 
-## Commercial Opportunity
+## Governance Opportunity
 
-Enterprise value comes from making AI-assisted work explainable and governable:
+Team value comes from making AI-assisted work explainable and governable:
 
 - Who approved external AI sharing?
 - Which tool route was chosen and why?
@@ -46,11 +46,10 @@ Enterprise value comes from making AI-assisted work explainable and governable:
 
 ## Open Core Boundary
 
-The open core should keep the policy language and local checks. Paid layers can add:
+The open core should keep the policy language and local checks. Future maintained layers can add:
 
 - Centralized policy distribution.
 - Team dashboards.
 - Managed registry.
 - Compliance exports.
 - Pack approval workflows.
-

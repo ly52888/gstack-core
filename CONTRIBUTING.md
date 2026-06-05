@@ -8,7 +8,7 @@ gstack-core is designed around small, reviewable additions.
 - Small reference updates that improve routing quality.
 - Eval prompts that catch bad routing, missing clarification, or weak closeout.
 - Doctor checks that identify real install problems without blocking optional workflows.
-- Commercially useful workflow packs that remain generic and do not leak private customer assumptions.
+- Workflow pack ideas that remain generic and do not leak private customer assumptions.
 
 ## Avoid
 
@@ -32,9 +32,9 @@ gstack-core is designed around small, reviewable additions.
 
 Keep `skills/gstack/SKILL.md` lean. Put detailed behavior in one-level reference files under `skills/gstack/references/`.
 
-## Commercial Contributions
+## Future Pack Contributions
 
-If a contribution is intended to support a future paid pack, keep the open-source part self-contained:
+If a contribution may support a future maintained pack, keep the open-source part self-contained:
 
 - Define the generic workflow in the open core.
 - Put private/customer-specific policy in local profiles outside this repo.

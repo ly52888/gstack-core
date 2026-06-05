@@ -19,7 +19,7 @@ Run this before creating or updating the public GitHub repository.
 - Capability card spec exists.
 - Evals demonstrate expected behavior.
 - GitHub repository description is concise.
-- Commercial roadmap is present but does not overpromise.
+- Sustainability roadmap is present but does not overpromise.
 - Security notes explain tool-routing risks.
 
 ## Suggested Repository Description

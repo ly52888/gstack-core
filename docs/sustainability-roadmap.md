@@ -1,8 +1,10 @@
-# Commercial Roadmap
+# Sustainability Roadmap
+
+This is a public planning note, not a pricing page or commitment to ship paid products. The open-source core should remain genuinely useful. Future sustainability work, if any, should focus on maintenance, team setup, private governance, and support.
 
 ## Strategy
 
-Use open source to prove the router, earn trust, and attract capability-card contributions. Monetize packaged expertise, private setup, governance, analytics, and maintained workflow packs.
+Use open source to prove the router, earn trust, and attract capability-card contributions. Leave room for maintained workflow packs, private setup, governance, analytics, and support for teams that need a managed version.
 
 The market wedge is Codex workflow maturity: as more builders use Codex for real projects, they need repeatable routing, verification, recovery, external-AI disclosure, and team governance rather than another prompt collection.
 
@@ -20,13 +22,13 @@ Always free:
 - Bundled codegraph-lite.
 - Basic eval prompts.
 
-Keeping these free makes the project credible. The commercial layer should help teams apply the router reliably across many projects, people, and policies.
+Keeping these free makes the project credible. Future maintained layers should help teams apply the router reliably across many projects, people, and policies.
 
-## Paid Layers
+## Future Maintained Layers
 
-### Pro Workflow Packs
+### Maintained Workflow Packs
 
-Sell curated, maintained packs for high-value workflows:
+Potential curated packs for high-value workflows:
 
 - Developer Pack: implementation, debugging, review, test generation, closeout.
 - GitHub Pack: PR triage, CI failure repair, issue-to-plan, release notes.
@@ -37,7 +39,7 @@ Sell curated, maintained packs for high-value workflows:
 
 ### Team Setup
 
-Service offering for teams:
+Possible service offering for teams:
 
 - Audit current Codex usage.
 - Build project capability cards.
@@ -46,7 +48,7 @@ Service offering for teams:
 - Create project profiles and handoff templates.
 - Train team members on natural command patterns.
 
-### Enterprise Governance
+### Team And Enterprise Governance
 
 Potential product layer:
 
@@ -59,14 +61,13 @@ Potential product layer:
 - Organization profiles.
 - Audit export for regulated workflows.
 
-## Early Pricing Hypotheses
+## Public Boundary
 
-These are planning anchors, not public pricing:
-
-- Pro Packs: one-time or annual license per user/team.
-- Team Setup: fixed implementation package.
-- Enterprise: annual subscription based on seats, repositories, or managed profiles.
-- Support: paid priority support and custom workflow design.
+- Do not publish pricing before real user demand is validated.
+- Do not imply the project is officially affiliated with OpenAI or Codex.
+- Do not frame reference-site workflows as cloning.
+- Do not make safety, clarification, doctor checks, or route traces private-only.
+- Do not collect private workflow data without explicit opt-in.
 
 ## Phased Plan
 
@@ -80,8 +81,8 @@ These are planning anchors, not public pricing:
 
 ### Phase 1: Packaged Expertise
 
-- Release first Pro Pack as a separate private or paid distribution.
-- Offer team setup manually.
+- Release a first maintained workflow pack if repeated user demand appears.
+- Offer team setup manually if teams ask for it.
 - Use real user workflows to improve open-core extension points.
 
 ### Phase 2: Governance
@@ -108,7 +109,7 @@ These are planning anchors, not public pricing:
 
 ## Current Recommendation
 
-Publish the open core first. Commercialize through services and packs before building SaaS.
+Publish the open core first. If demand appears, start with services and maintained packs before building any SaaS product.
 
 ## Near-Term Marketing Actions
 

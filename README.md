@@ -77,17 +77,19 @@ Capability cards live in `skills/gstack/capabilities/*.json` for installed skill
 - `Route Trace`: record why a route was chosen and how it was verified.
 - `Codegraph Lite`: optional bundled local symbol/index helper for orientation and impact checks.
 
-## Commercial Direction
+## Sustainability Direction
 
-gstack-core is intended to stay useful as an open-source core while leaving room for commercial packs, team setup, private registries, and enterprise governance. The open-source project should prove the routing model; paid layers can add packaged workflows, organization policy, route analytics, and private capability distribution.
+gstack-core is intended to stay useful as an open-source core while leaving room for future maintained packs, team setup, private registries, and governance tooling. The public project should prove the routing model first; any future maintained layer should reduce setup and policy friction without weakening the core router.
 
 See:
 
-- `docs/commercial-roadmap.md`
+- `docs/sustainability-roadmap.md`
 - `docs/product-positioning.md`
 - `docs/enterprise-governance.md`
 - `docs/marketing-copy.md`
+- `docs/community-strategy.md`
 - `docs/brand-guidelines.md`
+- `docs/comparable-project-notes.md`
 
 ## Open Source Prep
 

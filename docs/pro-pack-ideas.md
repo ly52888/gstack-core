@@ -1,10 +1,10 @@
-# Pro Pack Ideas
+# Maintained Pack Ideas
 
-These ideas are placeholders for future commercial packaging. They should not block the open-source core.
+These ideas are placeholders for future maintained workflow packaging. They should not block the open-source core.
 
-## Website Build Pack
+## Reference-Site Build Pack
 
-For users who say: "Here is a reference website; build something like this."
+For users who say: "Here is a reference website; help me design a differentiated implementation."
 
 Includes:
 
@@ -56,4 +56,3 @@ Includes:
 - External AI disclosure rules.
 - Route trace review templates.
 - Security-sensitive route escalation.
-

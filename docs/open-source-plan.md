@@ -33,21 +33,21 @@ v0.1 should include:
 - Ask gstack to debug a codebase; it should use codegraph or focused search first.
 - Ask gstack to finish work; it should verify and report cleanup.
 
-## Future Commercial Layer
+## Future Sustainability Layer
 
-- Pro capability packs for development, creative, GitHub/CI, local-prod recovery, and multi-AI planning.
+- Maintained capability packs for development, creative, GitHub/CI, local-prod recovery, and multi-AI planning.
 - Team workspace setup: private gstack profiles, capability cards, verification standards, and handoff docs.
 - Private registry and policy allowlists.
 - Route trace analytics and task-closeout reports.
 - Enterprise governance for tool usage, external AI disclosure, verification, and auditability.
-- Commercial support and implementation services.
+- Optional support and implementation services.
 
-Keep the open-source core strong enough to be trusted. Commercial value should come from packaged expertise, governance, private customization, team rollout, and managed updates, not from crippling the core router.
+Keep the open-source core strong enough to be trusted. Future sustainability value, if any, should come from packaged expertise, governance, private customization, team rollout, and managed updates, not from crippling the core router.
 
-## Commercial Guardrails
+## Sustainability Guardrails
 
 - Do not put private customer defaults into the open-source core.
 - Do not require cloud services for the basic skill to work.
-- Do not make security, doctor, route trace, or clarification gates paid-only.
-- Paid features should reduce team friction, policy risk, and setup time.
-- Enterprise controls should make external AI/tool use auditable, not opaque.
+- Do not make security, doctor, route trace, or clarification gates private-only.
+- Future maintained features should reduce team friction, policy risk, and setup time.
+- Team controls should make external AI/tool use auditable, not opaque.

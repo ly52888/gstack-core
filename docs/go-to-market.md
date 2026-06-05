@@ -1,4 +1,6 @@
-# Go-To-Market Notes
+# Community And Go-To-Market Notes
+
+These notes are for public positioning and early community learning. They are not a pricing plan or a commitment to launch a paid product.
 
 ## Initial Audience
 
@@ -35,9 +37,9 @@ Start with users who already feel workflow pain:
 - Token/context saved by progressive disclosure.
 - Tasks closed with verification evidence.
 - Number of user-contributed capability cards.
-- Repeated workflows worth turning into paid packs.
+- Repeated workflows worth turning into maintained packs.
 
-## Early Commercial Signals
+## Early Sustainability Signals
 
 Strong signals:
 
@@ -53,13 +55,16 @@ Weak signals:
 - Users ask for "more prompts" but not workflow integration.
 - Requests require many one-off customizations that do not generalize.
 
-## Recommended First Offer
+## Possible First Service Offer
 
-Start with service-led commercialization:
+If teams ask for hands-on help, start with service-led validation:
 
 ```text
 Private gstack setup for your team: capability cards, project profile, verification standards, and workflow handoff docs.
 ```
 
-Then turn repeated setup work into Pro Packs.
+Then turn repeated setup work into maintained packs only after real demand is clear.
 
+## Community Strategy
+
+Use `docs/community-strategy.md` as the channel plan. GitHub remains the source of truth; community posts should drive users back to the repo, examples, issues, and discussions.
