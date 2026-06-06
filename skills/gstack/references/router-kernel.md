@@ -16,7 +16,7 @@ Use this reference when choosing skills, plugins, MCP tools, CLI commands, local
 ## Routing Priority
 
 1. Explicit user request
-2. Safety and permission constraints
+2. Current Codex permission state plus real safety constraints
 3. Required freshness or account state
 4. Domain fit
 5. Lowest sufficient cost
@@ -66,6 +66,23 @@ If a preferred plugin/tool is unavailable:
 1. Try an equivalent CLI or official API when available.
 2. Use local inspection and document the limitation.
 3. Ask the user only if the missing capability blocks the task or changes output quality materially.
+
+## Codex Permission Model
+
+Use the active Codex session as the authority for tool permission. If the session is trusted, sandbox allows the action, and the plugin/MCP/browser/GitHub tool is enabled or already logged in, proceed without asking for another permission confirmation.
+
+Do ask only for:
+
+- Missing task facts that cannot be discovered.
+- Non-public data disclosure to external AI or third-party services.
+- Irreversible/high-impact actions: production data deletion, force-push, merge/release, real payment, mass messaging, ad spend, auth/payment/database boundary changes.
+- Tool login or authorization prompts that Codex cannot complete.
+
+Do not ask for:
+
+- Reading files, searching code, running tests/builds, creating local docs, using codegraph.
+- Browser/Chrome/GitHub read-only evidence gathering when tools are enabled.
+- Non-destructive implementation when the user asked to start, continue, fix, or execute.
 
 ## Route Trace
 

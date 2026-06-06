@@ -2,11 +2,14 @@
 
 Ask before acting when required inputs are missing and guessing would produce low-quality, risky, or hard-to-reverse output.
 
+Do not ask for permission that Codex already has. Treat the current Codex session permissions, project trust, enabled plugins, logged-in browser sessions, GitHub connector, MCP servers, and shell sandbox policy as the authority for whether an operation may run.
+
 ## Ask Style
 
 - Ask one to three short questions.
 - Offer defaults only when safe.
 - Do not ask for facts that can be discovered locally.
+- Do not ask for "permission" to run an already-authorized tool, command, browser check, GitHub read, test, build, or file edit.
 - If the user explicitly says to improvise, choose defaults and state them in the route preview.
 
 ## Minimum Inputs
@@ -22,7 +25,7 @@ Ask before acting when required inputs are missing and guessing would produce lo
 
 - Idea or goal
 - Evidence or reference material: URLs, screenshots, notes, docs, public examples
-- Whether external AI/browser discussion is allowed when non-public material will be shared
+- Whether external AI discussion may receive non-public material, only when such material is needed
 - Target user or primary use case, if not inferable from the reference
 - Business or success metric, if needed for product decisions
 - Constraints: stack, budget, timeline, must-use/must-not-do, if known
@@ -37,7 +40,7 @@ Ask before acting when required inputs are missing and guessing would produce lo
 - Asset ownership constraints: logos, photos, icons, fonts, copy, if relevant
 - Legal/compliance concerns or jurisdiction, if relevant
 
-If the user provides only a URL plus "I need to build a site/project like this, start", proceed to browser evidence gathering first. Ask clarifying questions after evidence gathering, not before, unless browser/external AI permission or access is blocked.
+If the user provides only a URL plus "I need to build a site/project like this, start", proceed to browser evidence gathering first. Ask clarifying questions after evidence gathering, not before, unless browser/external AI access is actually unavailable or non-public disclosure is required.
 
 ### Debugging
 
@@ -59,7 +62,7 @@ If the user says "this page", "here", or provides a screenshot/appshot, start fr
 
 - Repository or PR/issue URL
 - Desired action: inspect, comment, fix, merge, publish
-- Permission-sensitive actions require explicit confirmation
+- Follow the current Codex/GitHub permission state. Ask only before destructive or public write actions such as merge, release, force-push, deleting branches/issues, or posting user-attributed comments when the user did not ask for that action.
 
 ### Image
 
@@ -78,7 +81,7 @@ If the user says "this page", "here", or provides a screenshot/appshot, start fr
 - Script or message
 - Visual style
 - Voice/subtitles/music requirements
-- Source assets or permission to generate them
+- Source assets or instruction to generate assets
 
 ### Presentation/Design
 
@@ -96,3 +99,14 @@ Proceed when missing inputs are non-critical and defaults are obvious:
 - No exact test command but repo exposes standard scripts
 - No route trace preference
 - Minor copy or formatting edits with clear target
+- Codex already has filesystem/shell/browser/GitHub/plugin permission and the action is non-destructive
+- Browser or GitHub evidence gathering is needed and the relevant tool is enabled/logged in
+
+## Ask Only For Real Blockers
+
+Ask the user only when:
+
+- The task lacks facts that cannot be discovered locally.
+- The next action sends non-public data to an external AI or third-party service.
+- The next action is irreversible or high-impact: production data deletion, force push, public release, real payment, mass messaging, ad spend, auth/payment/database boundary change.
+- A tool returns a real login/authorization prompt that Codex cannot satisfy.

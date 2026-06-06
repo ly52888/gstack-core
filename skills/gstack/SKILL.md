@@ -7,7 +7,7 @@ description: >
   会根据需要选择相关 skill/plugin/MCP/CLI/local script，缺少关键条件时先向用户提问，
   工具不可用时说明并回退。兼容旧命令 `/启动`、`/gstack`、`/review`、`/qa`、`/ship`、
   `/local-codex`、`开启本地全自动目标开发模式`。
-version: 3.0.0
+version: 3.0.1
 author: gstack-core contributors
 tags: [codex, skills, workflow, tool-routing, development, creative, github, qa, recovery]
 ---
@@ -21,11 +21,29 @@ gstack-skills 是一个智能路由入口。用户可以在 `$gstack-skills` 后
 1. 用户显式点名的 skill、plugin、工具、URL、项目规则、`只本地`、`不要联网`、`先问我` 优先。
 2. 先分类再执行：开发、调试、审查、GitHub、文档、创作、浏览器/QA、恢复、清理、规划、研究。
 3. 只加载最相关的 reference 或 capability card，避免无意义消耗上下文。
-4. 缺少关键条件时先问，不要生成四不像图片/视频/方案/代码/PR 操作。
+4. 缺少会影响结果质量或安全的关键条件时才问；不要把 Codex 已授权的文件、命令、浏览器、GitHub、插件或 MCP 操作再次变成“权限确认”。
 5. 优先用本地事实：项目文件、route trace、codegraph、测试、日志、浏览器证据、官方文档。
-6. 高风险任务先做范围、影响面、回滚、验证和收尾标准。
-7. 开工前多 AI council 任务必须先完成证据整理、多轮互审、最终方案复核和用户确认；不得跳过讨论直接开发。
+6. 高风险任务先做范围、影响面、回滚、验证和收尾标准；只有不可逆生产破坏、资金/支付、真实外发、删除数据、泄露敏感信息等业务风险需要用户决策。
+7. 开工前多 AI council 任务必须先完成证据整理、多轮互审和最终方案复核；如果用户已经说“开始/继续/执行”，且 Codex 权限允许、没有敏感披露或不可逆风险，不要再要求一次权限确认。
 8. 完成时必须报告验证证据、改动路径、未解决 blocker 和临时文件清理状态。
+
+## Codex Permission Authority
+
+本技能服从当前 Codex 会话的权限模型。若当前会话、项目或插件已经授权某类操作，就直接执行，不要重复向用户索要同一层权限。
+
+视为已授权的常规操作包括：
+
+- 读写当前工作区文件、创建/修改文档、清理临时产物。
+- 运行本地命令、测试、构建、lint、typecheck、doctor、codegraph。
+- 使用已启用且已登录的 Chrome/Browser/GitHub/MCP/插件做读取、检查、截图、页面验收、issue/PR 信息读取。
+- 在用户要求“继续/开始/修复/发布/执行”且项目规则允许时，推进非破坏性实现和验证。
+
+仍需停下询问的情况只包括：
+
+- 缺少任务事实，继续会明显生成错误结果。
+- 要向外部 AI 或第三方服务发送非公开、shareable/sensitive 资料，且用户尚未授权这类披露。
+- 会执行不可逆或高影响动作：删除生产数据、重置历史、强推、合并/发布到公共远端、真实付款/扣费、真实群发/广告投放、变更生产认证/支付/数据库边界。
+- 插件、浏览器、GitHub、外部 AI 账号自身未登录或系统明确返回需要用户交互授权。
 
 ## Natural Language Usage
 
@@ -54,7 +72,7 @@ $gstack-skills 做一个 15 秒宣传视频，工具不够就先问我
 Route: <intent> | Mode: <native|single-tool|combo|subthread> | Need: <missing inputs or none> | Tools: <candidates> | Verify: <evidence>
 ```
 
-如果 `Need` 中有关键缺失项，先问 1-3 个短问题并停止，不要盲目执行。
+如果 `Need` 中有关键缺失项，先问 1-3 个短问题并停止。不要把“工具已授权但尚未使用”写成 Need。
 
 ## Simple Startup Trigger
 
@@ -70,7 +88,7 @@ Route: planning.multi-ai-council | Mode: external-browser-first
 2. 建立 evidence pack 和 do-not-copy 清单。
 3. 若已说明“浏览器已登录”或账号态可用，优先使用该账号态浏览器；否则只读取公开页面或询问。
 4. 启动至少 3 个外部 AI 的多轮 council；工具不可用时明确 fallback。
-5. 多轮互审、交叉攻击、最终方案复核完成前，不进入开发。
+5. 多轮互审、交叉攻击和最终方案复核完成前，不进入开发；复核完成后，若用户已要求开始且无不可逆风险，继续进入实现计划或开发。
 
 这种简单启动不要求用户一次性提供目标用户、成功指标、技术栈。缺失项由 Codex 在整理证据后用 1-3 个问题补齐。
 

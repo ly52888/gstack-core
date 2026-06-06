@@ -2,7 +2,7 @@
 
 Use this before building a new system, website, product workflow, major feature, marketing funnel, clone/inspired redesign, or architecture direction when the user wants multiple AI perspectives to improve requirements before implementation.
 
-The final deliverable is not "paste external AI answers into a document." The workflow must be a multi-round council: Codex gathers evidence in the browser, external AIs critique from different angles, Codex feeds the strongest objections back for another round, and only after convergence produces an implementation-ready plan for user approval. Do not start development until the council is complete or the user explicitly stops it.
+The final deliverable is not "paste external AI answers into a document." The workflow must be a multi-round council: Codex gathers evidence in the browser, external AIs critique from different angles, Codex feeds the strongest objections back for another round, and only after convergence produces an implementation-ready plan. Do not start development until the council is complete or the user explicitly stops it. If the user already said "start", "continue", or "execute" and Codex permissions allow the work, continue after the council unless a real blocker remains.
 
 ## Purpose
 
@@ -18,7 +18,7 @@ Do not use multiple AIs as a novelty. Use them to create pressure on weak assump
 
 ## Evidence Policy
 
-External AI review is valuable only when it receives enough concrete context. Do not over-sanitize until the brief becomes generic. Instead use **data classification + user approval + minimum necessary disclosure**.
+External AI review is valuable only when it receives enough concrete context. Do not over-sanitize until the brief becomes generic. Instead use **data classification + Codex permission state + minimum necessary disclosure**.
 
 Classify inputs before external sharing:
 
@@ -27,7 +27,7 @@ Classify inputs before external sharing:
 - `sensitive`: internal strategy, exact margins, private customer data, non-public code, unpublished launch plans.
 - `blocked`: credentials, tokens, private keys, passwords, payment data, exact customer PII, production secrets.
 
-Share public and user-approved shareable material. Summarize sensitive material only if the summary still preserves decision value and the user approves. Never share blocked material.
+Share public material without asking again when web/browser/plugin access is already authorized. Share non-public `shareable` material only if the user has allowed this category of disclosure in the current task or project. Summarize sensitive material only if the summary still preserves decision value and the user approves. Never share blocked material.
 
 If there is not enough concrete material for an external AI to reason from, ask the user for URLs, screenshots, competitor notes, product goals, target users, constraints, or legal/compliance concerns before opening external AI.
 
@@ -35,12 +35,13 @@ If there is not enough concrete material for an external AI to reason from, ask 
 
 Before opening external AI sites or browser tabs:
 
-1. Ask whether external AI discussion is allowed and what material may be shared.
+1. Use the current Codex permission state. If Chrome/Browser/plugin automation is enabled and logged in, do not ask for another browser/tool permission.
 2. Strip blocked material: secrets, tokens, passwords, private keys, payment data, exact customer PII, and production credentials.
-3. Prepare an evidence brief with enough useful detail. If removing sensitive details would make the brief too generic, ask the user for shareable substitutes instead of proceeding.
-4. Use browser/Chrome/plugin automation only when the relevant browser tool is actually available and logged in. If unavailable, run an internal council simulation and clearly label it as internal-only.
-5. Do not let external AI outputs override local project facts, user constraints, law, safety, or verified data.
-6. Require external AIs to base responses only on the provided brief, attached screenshots, URLs, and explicitly cited sources. They must label assumptions and refuse to invent facts from memory.
+3. Ask the user only if non-public `shareable` or `sensitive` material must be sent outside Codex and no prior disclosure permission exists.
+4. Prepare an evidence brief with enough useful detail. If removing sensitive details would make the brief too generic, ask the user for shareable substitutes instead of proceeding.
+5. If the external AI tool/account is unavailable, run an internal council simulation and clearly label it as internal-only.
+6. Do not let external AI outputs override local project facts, user constraints, law, safety, or verified data.
+7. Require external AIs to base responses only on the provided brief, attached screenshots, URLs, and explicitly cited sources. They must label assumptions and refuse to invent facts from memory.
 
 ## When To Ask First
 
@@ -50,8 +51,7 @@ Ask for missing inputs when any of these are unclear:
 - Target users and top use case
 - Business goal or success metric
 - Constraints: budget, timeline, stack, must-use tools, must-not-do items
-- Whether external AI/browser use is allowed
-- What public/shareable material may be provided to external AI
+- Whether non-public material may be provided to external AI, when needed
 
 ## Website Clone / Inspired Redesign Workflow
 
@@ -152,7 +152,7 @@ Round 0: Evidence Pack
    - Legal/compliance questions
    - Questions to challenge
    - Desired output format
-3. Codex classifies disclosure level and asks the user before sharing sensitive/shareable material.
+3. Codex classifies disclosure level. Public material may be shared under current Codex/browser permissions; ask only before sharing non-public material without prior approval.
 
 Round 1: Independent Critique
 
@@ -220,11 +220,11 @@ Codex synthesis:
    - Differentiated MVP requirements draft
    - Do-not-copy list
    - Development readiness decision
-6. If building continues, convert the synthesis into a short implementation-ready spec or task plan, then ask the user to approve before development.
+6. If building continues, convert the synthesis into a short implementation-ready spec or task plan. If the user already asked to start/continue/execute and no real blocker remains, proceed into development without another permission prompt. Ask only when the plan requires a user business decision or high-risk irreversible action.
 
 ## Internal Council Fallback
 
-If external AI tools, accounts, browser control, network, or user approval are missing, run the same council roles internally and label the result:
+If external AI tools, accounts, browser control, network, or required disclosure approval are missing, run the same council roles internally and label the result:
 
 ```text
 Mode: internal multi-perspective review; no external AI browser discussion was performed.
@@ -334,11 +334,11 @@ Next step:
 
 ## Stop Conditions
 
-Stop and ask the user before continuing when:
+Stop and ask the user before continuing only when:
 
 - External AI requires login or paid access not available.
 - Prompt contains blocked material.
 - Available evidence is too generic for useful external review.
 - A user decision is needed to choose target customer, MVP, pricing, or stack.
 - A proposed direction has high legal, security, payment, health, or financial risk.
-- Fewer than the required council rounds completed and the user has not approved stopping early.
+- Fewer than the required council rounds completed and the route cannot continue with an internal fallback or scoped plan.
